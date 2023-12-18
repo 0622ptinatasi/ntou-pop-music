@@ -37,5 +37,11 @@ module.exports = {
       filename: 'all_announcement.html',
       title: 'All Announcement',
     },
+    log_in: {
+      entry: 'src/log_in.js',
+      template: 'src/log_in.html',
+      filename: 'log_in.html',
+      title: 'Log IN',
+    },
   },
 };

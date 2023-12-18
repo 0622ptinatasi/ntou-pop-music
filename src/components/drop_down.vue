@@ -40,7 +40,7 @@
             ]
           },
           { name: '加入我們', links: [
-            { label: '登入', url: '' },
+            { label: '登入', url: '../log_in.html' },
             ] 
           }
         ]
