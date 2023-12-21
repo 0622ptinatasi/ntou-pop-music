@@ -27,7 +27,7 @@
 </template>
 
 <script>
-//import axios from 'axios';
+import axios from 'axios';
 
 export default {
     data() {
@@ -39,6 +39,14 @@ export default {
     methods: {
         login() {
             //to be implement
+            // 发送 GET 请求到 PHP 后端
+            axios.get('http://localhost/wp/data.php')
+            .then(response => {
+                this.responseData = response.data;
+            })
+            .catch(error => {
+                console.error('请求失败：', error);
+            });
         },
     },
 };
