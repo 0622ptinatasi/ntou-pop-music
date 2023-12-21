@@ -1,22 +1,18 @@
 <template>
-    <footer class="footer">
-      <div class="container text-center">
-        <p>Designed By NTOU CSE Tsai Pei Ying &copy; 2023 All Rights Reserved.</p>
-      </div>
-    </footer>
+  <br>
+  <br>
+  <br>
+  <div class="footer">
+    <div class="container text-center">
+      <p>Designed By NTOU CSE Tsai Pei Ying &copy; 2023 All Rights Reserved.</p>
+    </div>
+  </div>
 </template>
-  
-<script>
-  export default {
-    
-  };
-</script>
-  
+
 <style scoped>
   .footer {
-    background-color: #f8f9fa;
+    background-color: #c4c3c6;
     padding: 20px;
-    position: fixed;
     bottom: 0;
     width: 100%;
   }

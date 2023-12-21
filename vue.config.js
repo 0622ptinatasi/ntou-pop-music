@@ -43,5 +43,11 @@ module.exports = {
       filename: 'log_in.html',
       title: 'Log IN',
     },
+    calendar: {
+      entry: 'src/my_calendar.js',
+      template: 'src/my_calendar.html',
+      filename: 'my_calendar.html',
+      title: 'Calendar',
+    }
   },
 };

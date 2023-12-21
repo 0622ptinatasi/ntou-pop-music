@@ -1,19 +1,19 @@
 <template>
-    <div class="word">
-      <div class="location box" >
-        <div v-for="(category, index) in categories" :key="index">
-          {{ category.name }}
-          <ul v-if="category.links.length">
-            <li v-for="(link, linkIndex) in category.links" :key="linkIndex">
-              <a href="#" @click="redirectTo(link.url)">{{ link.label }}</a>
-            </li>
-          </ul>
-        </div>
+  <div class="word">
+    <div class="location box" >
+      <div v-for="(category, index) in categories" :key="index">
+        {{ category.name }}
+        <ul v-if="category.links.length">
+          <li v-for="(link, linkIndex) in category.links" :key="linkIndex">
+            <a href="#" @click="redirectTo(link.url)">{{ link.label }}</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </template>
+  </div>
+</template>
   
-  <script>
+<script>
   export default {
     data() {
       return {
@@ -36,7 +36,7 @@
             name: '活動',
             links: [
               { label: '活動介紹', url: '../activity_introduction.html' },
-              { label: '活動日程', url: '' }
+              { label: '活動日程', url: '../my_calendar.html' }
             ]
           },
           { name: '加入我們', links: [
@@ -52,9 +52,9 @@
         }
     }
   };
-  </script>
+</script>
   
-  <style scoped>
+<style>
   @import '~bootstrap/dist/css/bootstrap.min.css';
   @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC');
   .word {
@@ -136,5 +136,4 @@
       position: relative;
     }
   }
-  </style>
-  
+</style>

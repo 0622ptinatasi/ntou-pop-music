@@ -73,7 +73,7 @@ export default {
 };
 </script>
   
-  <style>
+<style>
   @import '~bootstrap/dist/css/bootstrap.min.css';
   @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC');
   .card-img-small {
@@ -83,5 +83,5 @@ export default {
   .word{
     font-family: 'Noto Sans TC';
   }
-  </style>
+</style>
   
