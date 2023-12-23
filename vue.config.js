@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/ntou-pop-music/dist/' : '/',
+  publicPath: '/ntou-pop-music/dist/',
   pages: {
     index: {
       entry: 'src/index.js',
