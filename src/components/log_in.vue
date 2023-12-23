@@ -28,6 +28,7 @@
 
 <script>
 import axios from 'axios';
+/* eslint-disable */
 
 export default {
     data() {
@@ -40,9 +41,9 @@ export default {
         login() {
             //to be implement
             // 发送 GET 请求到 PHP 后端
-            axios.get('http://localhost/wp/data.php')
+            axios.get('https://websiteprogrammingteam31.000webhostapp.com/login.php')
             .then(response => {
-                this.responseData = response.data;
+                console.log("YES");
             })
             .catch(error => {
                 console.error('请求失败：', error);
