@@ -6,7 +6,7 @@
                     <h1 style="font-weight:bold">&#x1F3B6;歡迎來到海大熱音&#x1F3B6;</h1>
                 </div>
                 <br>
-                <img src="../assets/main_photo/pic11.jpg" class="card-img-top mx-auto" alt="Card Image" style="width:700px">
+                <img src="../assets/main_photo/pic11.jpg" class="card-img-top mx-auto img-fluid" alt="Card Image" style="width:700px">
                 <div class="card-body">
                 <h4 class="card-title" style="font-weight:bold">&#x2B50;關於我們</h4>
                 <p class="card-text">
@@ -52,7 +52,7 @@
                 </p>
                 <h4 class="card-title" style="font-weight:bold">&#x2B50;地理位置</h4>
                 <p class="card-text">&#x1F680;國立臺灣海洋大學 基隆市中正區北寧路2號 學生活動中心 2樓 電梯出來左轉到底就到了哦！</p>
-                <iframe class="mx-auto d-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.5738231923538!2d121.77515518687761!3d25.150095276228534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4f512ee85b31%3A0xca1fc50623dcfff0!2z5ZyL56uL5Y-w54Gj5rW35rSL5aSn5a245a2455Sf5rS75YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1702406215772!5m2!1szh-TW!2stw" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="mx-auto d-block map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.5738231923538!2d121.77515518687761!3d25.150095276228534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4f512ee85b31%3A0xca1fc50623dcfff0!2z5ZyL56uL5Y-w54Gj5rW35rSL5aSn5a245a2455Sf5rS75YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1702406215772!5m2!1szh-TW!2stw" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <br>
                 <h4 class="card-title" style="font-weight:bold">&#x2B50;外部資源</h4>
                 <a href="https://www.facebook.com/ntoupopmusicclub/?locale=zh_TW" target="_blank"><img src="../assets/facebook_icon.png" style="width:30px;" class="mr"></a>
@@ -84,5 +84,10 @@
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
+  @media (max-width: 767px) {
+    .map-iframe {
+        width: 100%; /* iframe 宽度100% */
+        height: 300px; /* 设置iframe高度，可以根据实际情况调整 */
+    }
+  }
 </style>
-  

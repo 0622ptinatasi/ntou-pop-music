@@ -10,7 +10,7 @@
       <br>
       <div class="row">
         <div class="col text-center">
-            <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23B39DDB&ctz=Asia%2FTaipei&src=NTYxOGQ4MzkyN2YyZjRjZjIzNGNkZWU3ODM3OTYyYjZjYTRjYzUyODVkNmI2NzEwOTc1NzViMTA0NDYyMTQ0MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23B39DDB" style="border-width:0" width="700" height="500" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23B39DDB&ctz=Asia%2FTaipei&src=NTYxOGQ4MzkyN2YyZjRjZjIzNGNkZWU3ODM3OTYyYjZjYTRjYzUyODVkNmI2NzEwOTc1NzViMTA0NDYyMTQ0MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23B39DDB" style="border-width:0" width="700" height="500" frameborder="0" scrolling="no" class="cal-iframe"></iframe>
         </div>
       </div>
       <br>
@@ -21,5 +21,11 @@
     @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC');
     .word{
       font-family: 'Noto Sans TC';
+    }
+    @media (max-width: 767px) {
+      .cal-iframe {
+          width: 100%;
+          height: 300px;
+      }
     }
   </style>
