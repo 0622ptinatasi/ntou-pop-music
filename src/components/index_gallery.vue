@@ -71,7 +71,7 @@
         this.currentIndex = (this.currentIndex + 1) % this.images.length;
       },
       goToAbout() {
-        location.href = '../about_us.html';
+        location.href = 'about_us.html';
       },
     },
     mounted() {

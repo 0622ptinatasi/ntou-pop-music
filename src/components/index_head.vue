@@ -11,7 +11,7 @@
   export default {
     methods: {
         goToMainPage() {
-          window.location.href = '../index.html';
+          window.location.href = 'index.html';
         }
     }
   };

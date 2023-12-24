@@ -7,7 +7,7 @@
         return {
             bulletin_info: [],
             totBulletin: 0,
-            pageSize: 10,
+            pageSize: 5,
             curPage: 1,
             cut: [],
             totPage: 1,
@@ -15,8 +15,9 @@
         }
     },
     created: function () {
-        axios.get("http://localhost:3000/bulletin")
+        axios.get("https://websiteprogrammingteam31.000webhostapp.com/announcement.php")
             .then((res) => {
+                console.log(res.data)
                 this.bulletin_info=res.data;
                 for (let item of this.bulletin_info) {
                     item.headid="head"+item.bulletin_ID;
@@ -91,7 +92,7 @@
                         <div v-bind:id="info.bodyid" class="accordion-collapse collapse" v-bind:aria-labelledby="info.headid"
                             data-bs-parent="#bulletin">
                             <div class="accordion-body"  style="white-space: pre-line;">
-                                {{ info.content }}
+                                <div v-html="info.content.replace(/\\n/g, '<br>')"></div>
                             </div>
                         </div>
                     </div>
@@ -101,7 +102,7 @@
     </div>
     <div class="row">
         <div class="col-md-10 text-end">
-            <a href="../all_announcement.html" class="more-link">more...</a>
+            <a href="all_announcement.html" class="more-link">more...</a>
         </div>
     </div>
   </div>

@@ -15,7 +15,7 @@
         }
     },
     created: function () {
-        axios.get("http://localhost:3000/bulletin")
+        axios.get("https://websiteprogrammingteam31.000webhostapp.com/announcement.php")
             .then((res) => {
                 this.bulletin_info=res.data;
                 for (let item of this.bulletin_info) {
@@ -92,7 +92,7 @@
                     <div v-bind:id="info.bodyid" class="accordion-collapse collapse" v-bind:aria-labelledby="info.headid"
                         data-bs-parent="#bulletin">
                         <div class="accordion-body"  style="white-space: pre-line;">
-                            {{ info.content }}
+                            <div v-html="info.content.replace(/\\n/g, '<br>')"></div>
                         </div>
                     </div>
                 </div>

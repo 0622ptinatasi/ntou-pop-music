@@ -1,57 +1,78 @@
 <template>
   <div class="word">
-    <div class="location box" >
+    <div class="location box">
       <div v-for="(category, index) in categories" :key="index">
         {{ category.name }}
-        <ul v-if="category.links.length">
+        <ul v-if="shouldDisplayLinks(category)">
           <li v-for="(link, linkIndex) in category.links" :key="linkIndex">
-            <a href="#" @click="redirectTo(link.url)">{{ link.label }}</a>
+            <a href="#" @click="handleLinkClick(link)">{{ link.label }}</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
 </template>
-  
+
 <script>
-  export default {
-    data() {
-      return {
-        categories: [
-          {
-            name: '關於我們',
-            links: [
-              { label: '社團介紹', url: '../about_us.html' },
-              { label: '幹部介紹', url: '../about_executive.html' },
-              { label: '器材介紹', url: '../about_equipment.html' }
-            ]
-          },
-          {
-            name: '公告',
-            links: [
-              { label: '所有公告', url: '../all_announcement.html' }
-            ]
-          },
-          {
-            name: '活動',
-            links: [
-              { label: '活動介紹', url: '../activity_introduction.html' },
-              { label: '活動日程', url: '../my_calendar.html' }
-            ]
-          },
-          { name: '加入我們', links: [
-            { label: '登入', url: '../log_in.html' },
-            ] 
+export default {
+  data() {
+    return {
+      categories: [
+        {
+          name: '關於我們',
+          links: [
+            { label: '社團介紹', url: 'about_us.html' },
+            { label: '幹部介紹', url: 'about_executive.html' },
+            { label: '器材介紹', url: 'about_equipment.html' }
+          ]
+        },
+        {
+          name: '公告',
+          links: [
+            { label: '所有公告', url: 'all_announcement.html' }
+          ]
+        },
+        {
+          name: '活動',
+          links: [
+            { label: '活動介紹', url: 'activity_introduction.html' },
+            { label: '活動日程', url: 'my_calendar.html' }
+          ]
+        },
+        { name: '加入我們', links: [] } // Initially empty, will be populated dynamically
+      ]
+    };
+  },
+  methods: {
+    shouldDisplayLinks(category) {
+      if (category.name === '加入我們') {
+        const isLogin = localStorage.getItem('isLogin');
+        if (isLogin === 'true') {
+          const user = localStorage.getItem('user');
+          if (user) {
+            // 動態填充用戶名稱
+            category.name = user;
+            category.links = [
+              { label: '登出', url: 'index.html' },
+            ];
           }
-        ]
-      };
-    },
-    methods: {
-        redirectTo(url) {
-        window.location.href = url;
+        } else {
+          category.links = [
+            { label: '登入', url: 'log_in.html' },
+          ];
         }
+      }
+      return category.links.length > 0;
+    },
+    handleLinkClick(link) {
+      if (link.label === '登出') {
+        localStorage.removeItem('isLogin');
+        localStorage.removeItem('user');
+      }
+      window.location.href = link.url;
     }
-  };
+  }
+};
 </script>
   
 <style>
