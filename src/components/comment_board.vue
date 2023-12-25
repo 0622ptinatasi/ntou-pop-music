@@ -219,7 +219,7 @@
             },
             btnClick(){
                 if (!this.bandName || !this.day || this.selectedOptions.length === 0) {
-                    alert('請填寫所有必要欄位！');
+                    alert('請填寫所有必要欄位！');//提示使用者
                     return;
                 }
                 const selectedOptionsString = this.selectedOptions.join('');
