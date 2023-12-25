@@ -54,12 +54,6 @@ module.exports = {
       template: 'src/band_use.html',
       filename: 'band_use.html',
       title: 'Band Use Time',
-    },
-    personal_use: {
-      entry: 'src/personal_use.js',
-      template: 'src/personal_use.html',
-      filename: 'personal_use.html',
-      title: 'Personal Use Time',
     }
   },
 };
