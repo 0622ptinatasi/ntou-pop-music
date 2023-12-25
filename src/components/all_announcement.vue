@@ -139,7 +139,7 @@
         border-color: #f7c4e8;
     }
     .custom-pagination .page-item.active .page-link {
-        background-color: #f8639a; /* 活動按鈕背景色 */
+        background-color: #f8639a;
         border-color: #f8639a;
     }
 </style>
