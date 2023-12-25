@@ -103,7 +103,7 @@
                     </label>
                 </div>
             </div>
-            <button @click="btnClick" class="btn btn-primary">發送</button>
+            <button @click="btnClick" class="btn my_btn1">發送</button>
         </div>
         <br>
         <div class="row">
@@ -151,7 +151,7 @@
                     </label>
                 </div>
             </div>
-            <button @click="btnClick2" class="btn btn-primary">發送</button>
+            <button @click="btnClick2" class="btn my_btn2">發送</button>
         </div>
     </div>
 </template>
@@ -332,6 +332,12 @@
         background-color: rgb(246, 250, 177);
     }
     .alert_color_v2{
+        background-color: rgb(250, 221, 177);
+    }
+    .my_btn1{
+        background-color: rgb(246, 250, 177);
+    }
+    .my_btn2{
         background-color: rgb(250, 221, 177);
     }
 </style>

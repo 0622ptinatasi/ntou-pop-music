@@ -100,8 +100,7 @@
         </div>
     </div>
     <br>
-    <!-- 分頁 -->
-    <nav aria-label="Page navigation">
+    <nav aria-label="Page navigation" class="custom-pagination">
       <ul class="pagination justify-content-center">
         <li v-for="page in totPage" :key="page" class="page-item" :class="{ active: page === curPage }">
           <a class="page-link" @click="slice(page)">{{ page }}</a>
@@ -133,6 +132,15 @@
     .accordion-button:not(.collapsed) {
         background-color: #f8639a;
         color: #ffffff;
-      }
+    }
+    .custom-pagination .page-link {
+        color: #fff;
+        background-color: #f7c4e8;
+        border-color: #f7c4e8;
+    }
+    .custom-pagination .page-item.active .page-link {
+        background-color: #f8639a; /* 活動按鈕背景色 */
+        border-color: #f8639a;
+    }
 </style>
     

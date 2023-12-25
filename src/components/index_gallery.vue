@@ -1,4 +1,9 @@
 <template>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <a class="my_link" href="https://docs.google.com/presentation/d/1dgjsgpsHRHbhm3NTI2n2m1cjWRfhywCx/edit#slide=id.p1" target="_blank">前往簡報</a>
+    </div>
+  </div>
   <div class="home">
     <img src="@/assets/arrow_left.jpg" @click="prevImage" class="arrow"/>
     <div class="slideshow-container">
@@ -37,6 +42,13 @@
   object-fit: cover;
   border: 2px solid #ccc;
   border-radius: 8px;
+}
+.my_link {
+  color: #f52d2d;
+  font-weight: bolder;
+}
+.my_link:hover {
+  color: #b20606;
 }
 </style>
 <script>
