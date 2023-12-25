@@ -39,7 +39,7 @@ export default {
             { label: '活動日程', url: 'my_calendar.html' }
           ]
         },
-        { name: '加入我們', links: [] } // Initially empty, will be populated dynamically
+        { name: '加入我們', links: [] }
       ]
     };
   },
@@ -50,9 +50,11 @@ export default {
         if (isLogin === 'true') {
           const user = localStorage.getItem('user');
           if (user) {
-            // 動態填充用戶名稱
             category.name = user;
             category.links = [
+              { label: '搶團', url: 'band_use.html' },
+              { label: '個練時間', url: 'personal_use.html' },
+              { label: '檢查相簿', url: 'https://photos.app.goo.gl/R7r6JJphuTTtQDr49' },
               { label: '登出', url: 'index.html' },
             ];
           }

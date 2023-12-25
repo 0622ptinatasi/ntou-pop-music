@@ -1,4 +1,3 @@
-<!-- Calendar.vue -->
 <template>
   <br>
   <div class="container word">

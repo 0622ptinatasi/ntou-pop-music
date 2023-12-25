@@ -86,8 +86,8 @@
   }
   @media (max-width: 767px) {
     .map-iframe {
-        width: 100%; /* iframe 宽度100% */
-        height: 300px; /* 设置iframe高度，可以根据实际情况调整 */
+        width: 100%;
+        height: 300px;
     }
   }
 </style>

@@ -18,7 +18,7 @@
 }
 
 .arrow {
-  height: 50px; /* Adjust the height as needed */
+  height: 50px;
   cursor: pointer;
 }
 
@@ -75,7 +75,6 @@
       },
     },
     mounted() {
-      // 定期更換照片
       setInterval(this.nextImage, 5000);
     }
   };

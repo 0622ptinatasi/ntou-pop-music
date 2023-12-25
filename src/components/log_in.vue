@@ -38,43 +38,34 @@
     },
     methods: {
       login() {
-        // 发送 POST 请求到 PHP 后端
         axios.post('https://websiteprogrammingteam31.000webhostapp.com/log_in.php', {
             username: this.account,
             password: this.password,
         }, {
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded', // 或其他適當的 Content-Type
+                'Content-Type': 'application/x-www-form-urlencoded',
             },
         })
         .then(response => {
             console.log(response.data);
-            // 解析 response.data 字符串成對象
             const responseData = this.parseQueryString(response.data);
 
-            // 判斷登入成功與否
             if (responseData.success === '1') {
                 console.log('Message:', responseData.message);
                 localStorage.setItem('isLogin', 'true');
                 localStorage.setItem('user', this.account);
                 window.location.href = 'index.html';
-                // 在這裡進行登入成功的特殊處理
-                // 可以進行路由跳轉或其他操作
             } else {
                 console.log('Message:', responseData.message);
                 window.alert('帳號or密碼輸入錯誤');
-                // 在這裡處理登入失敗的邏輯
             }
         })
         .catch(error => {
             if (error.response) {
-                // 伺服器回應了，但狀態碼不在 2xx 範圍內
                 console.error('伺服器回應錯誤', error.response.data);
             } else if (error.request) {
-                // 請求已經發送，但沒有收到回應
                 console.error('沒有收到伺服器回應');
             } else {
-                // 在設置請求時發生了一些錯誤
                 console.error('請求錯誤', error.message);
             }
         });
